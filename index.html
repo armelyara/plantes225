@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta property="fb:pages" content="" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#f0f0f0">
+    <meta name="msapplication-TileColor" content="#67ca8c">
+    <meta name="msapplication-TileImage" content="icons/favicon.ico">
+    <meta name="author" content="The Day" />
+    <meta name="title" content="Les plantes du 225">
+    <meta name="keywords" content="" />
+    <meta name="description" content="Les plantes du 225">
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Les plantes du 225" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://les-plantes-du-225.web.app/" />
+    <meta property="og:site_name" content="Les plantes du 225" />
+    <meta property="og:image" content="https://les-plantes-du-225.web.app/icons/android/android-launchericon-512-512.png" />
+    <meta property="og:image:secure_url" content="https://les-plantes-du-225.web.app/icons/android/android-launchericon-512-512.png" />
+    <meta property="og:image:width" content="567" />
+    <meta property="og:image:height" content="567" />
+    <link rel="canonical" href="https://les-plantes-du-225.web.app/" />
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="icons/favicon-32x32.png" type="image/png" />
+
+    <link rel="apple-touch-icon" sizes="48x48" href="icons/android/android-launchericon-48-48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/android/android-launchericon-72-72.png">
+    <link rel="apple-touch-icon" sizes="6x96" href="icons/android/android-launchericon-96-96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/android/android-launchericon-144-144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icons/android/android-launchericon-192-192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icons/android/android-launchericon-512-512.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/android/android-launchericon-96-96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="icons/android/android-launchericon-144-144.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android/android-launchericon-192-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icons/android/android-launchericon-512-512.png">
+    
+    <title>Les plantes du 225</title>
+
+    <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-180x180.png" sizes="180x180">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+
+    <div class="form-group">
+        <h1 class="text-center">Les plantes du 225</h1>
+
+        <input type="file" id="photo" accept="image/*;capture=camera" />
+        <button onclick="uploadImage()">Envoyer</button>
+
+    </div>
+
+
+    <br><br><br><br>
+    <form action="" method="POST" id="registrationform">
+
+        <div class="alert">Message Sent</div>
+        <fieldset>
+            <!-- Section 1 -->
+
+
+            <label class="" for="vertu">Vertus therapeutique:</label>
+            <input type="text" name="vertu" value="" id="vertu" required />
+
+            <label class="" for="nompop">Nom populaire:</label>
+            <input type="nompop" name="nompop" value="" id="nompop" required />
+
+            <label for="nomverna">Nom Vernaculaire:</label>
+            <input type="nomverna" name="nomverna" value="" id="nomverna" required />
+
+            <label for="nomscien">Nom scientifique:</label>
+            <input type="text" name="nomscien" value="" id="nomscien" required />
+        </fieldset>
+
+
+        <!-- section 2 -->
+
+
+
+
+
+
+
+        <button type="submit" sendMessage()>Envoyer</button>
+    </form>
+
+    <footer class="footer-area style-02 bg-blue">
+
+        <div class="copyright-area">
+            <!-- copyright area -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-inner">
+                            <!-- copyright inner wrapper -->
+                            <div class="left-content-area">
+                                <!-- left content area -->
+                                &copy; Copyrights 2020 All rights reserved.
+                            </div>
+                            <!-- //. left content aera -->
+                            <div class="right-content-area">
+                                <!-- right content area -->
+                                Designed by <strong>The Day</strong>
+                            </div>
+                            <!-- //. right content area -->
+                        </div>
+                        <!-- //.copyright inner wrapper -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //. copyright area -->
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/firebase-messaging-sw.js')
+                    .then(registration => {
+                        console.log(`Service Worker registered! Scope: ${registration.scope}`);
+                    })
+                    .catch(err => {
+                        console.log(`Service Worker registration failed: ${err}`);
+                    });
+            });
+        }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
